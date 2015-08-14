@@ -1,4 +1,4 @@
-=== FAQ WD ===
+=== FAQ ===
 Contributors: webdorado
 Donate link: https://web-dorado.com/products/wordpress-faq-wd.html 
 Tags: FAQ, FAQ Plugin, FAQs,wordpress faq, questions, answer, answers, helpdesk, help desk, help, frequently asked questions, faq page, FAQ widget
