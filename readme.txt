@@ -6,10 +6,12 @@ Tested up to: 4.2
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
+  
 Organize and publish your FAQs in an easy and elegant way using FAQ WD. 
-
+  
 == Description ==
+
+
 Do you need an elegant FAQ section to describe details of your services, terms and conditions? You have a long company history and want to have it in Q&A format? Then FAQ WD will be the most convenient tool for reaching a highly professional result. 
 
 Using the FAQ WD plugin you can create unlimited amount of questions and assign them to categories. The accordion view will allow displaying only the questions thus saving space and allowing the user to navigate to the relevant question. To make the question search even user, it is possible to display a FAQ-specific search box.
