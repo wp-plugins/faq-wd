@@ -11,6 +11,7 @@ Organize and publish your FAQs in an easy and elegant way using FAQ WD.
   
 == Description ==
 
+[WordPress FAQ WD](https://web-dorado.com/products/wordpress-faq-wd.html)
 
 Do you need an elegant FAQ section to describe details of your services, terms and conditions? You have a long company history and want to have it in Q&A format? Then FAQ WD will be the most convenient tool for reaching a highly professional result. 
 
@@ -33,6 +34,11 @@ The categories can have descriptions. The details about the categories will be p
 *   Rating option for the Q&A
 *   FAQ sharing (Facebook, Google+, Twitter)
 *   Support for comments
+
+Upgrade to [WordPress FAQ WD Pro](https://web-dorado.com/products/wordpress-faq-wd.html) to add features: 
+   
+* 5 default customizable themes 
+* Option to create more themes
 
 
 == Installation ==
