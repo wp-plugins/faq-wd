@@ -11,9 +11,9 @@ Organize and publish your FAQs in an easy and elegant way using FAQ WD.
   
 == Description ==
 
-[WordPress FAQ WD](https://web-dorado.com/products/wordpress-faq-wd.html)
-[Demo](http://wpdemo.web-dorado.com/faq-2/)  
-[User Manual](https://web-dorado.com/wordpress-faq-wd/installing.html)  
+[WordPress FAQ WD](https://web-dorado.com/products/wordpress-faq-wd.html)   
+[Demo](http://wpdemo.web-dorado.com/faq-2/)     
+[User Manual](https://web-dorado.com/wordpress-faq-wd/installing.html)    
 
 Do you need an elegant FAQ section to describe details of your services, terms and conditions? You have a long company history and want to have it in Q&A format? Then FAQ WD will be the most convenient tool for reaching a highly professional result. 
 
