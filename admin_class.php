@@ -63,26 +63,27 @@ class faq_admin_class {
 
     public function faqwd_head() {
         $cat_ids = get_option('faqwd_categories_order');
-        $cat_ids = json_decode($cat_ids);
+        $cat_ids = json_decode($cat_ids);        
         ?>
         <script>
             var faq_plugin_url = '<?php echo plugins_url(plugin_basename(dirname(__FILE__))); ?>';
-            var categories = [];
-        </script>
+            var categories = new Array();
+       
         <?php
         if ($cat_ids) {
+            $j = 0;
             foreach ($cat_ids as $i => $id) {
                 $term = get_term($id, 'faq_category');
                 ?>
-                <script>
-                    categories[<?php echo $i; ?>] = {
+                    categories[<?php echo $j; ?>] = {
                         id: '<?php echo $id; ?>',
                         name: '<?php echo $term->name; ?>'
                     };
-                </script>
                 <?php
-            }
+                $j++;
+            }            
         }
+        ?> </script><?php
     }
 
     public function admin_head() {

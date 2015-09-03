@@ -42,7 +42,7 @@
 
 
 //add popup
-        editor.addCommand('faq_wd_popup', function (ui, v, e) {
+        editor.addCommand('faq_wd_popup', function (ui, v, e) {            
             var cats = new Array();          
             if (v.cats) {
                 cats = v.cats.split(',');
@@ -92,8 +92,8 @@
                 name: 'select_category',
                 text: 'Select Categories'
                     };
-            var i;            
-            for (i=1; i < categories.length + 1; i++) {                
+            var i;                     
+            for (i=1; i < categories.length + 1; i++) {                                
                 var checked = false;
                 if (inArray(categories[i-1].id, cats)) {
                     checked = true;
