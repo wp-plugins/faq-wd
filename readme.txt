@@ -68,7 +68,7 @@ After downloading the ZIP file of the FAQ WD plugin,
 == Changelog ==
 
 = 1.0.1 =
-MInor bug fixed
+MInor bug fixed  
 
 = 1.0.0 =
-Initial version
+Initial version    
