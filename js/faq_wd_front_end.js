@@ -2,7 +2,7 @@
     setTimeout(function () {
         jQuery('.faqwd_conteiner').each(function (k, v) {
             jQuery(this).find('.faqwd_cat_desc').hide();
-            if (jQuery(this).find('.faqwd_categories').attr("class") == "faqwd_categories hidden") {
+            if (jQuery(this).find('.faqwd_categories').attr("class") == "faqwd_categories faqwd_hidden") {
                 jQuery(this).find(".faqwd_cat").show();
             } else {
                 jQuery(this).find('.faqwd_categories_li:first').addClass("faqwd_cat_current");

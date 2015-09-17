@@ -3,7 +3,7 @@
 class Display {
 
     public $li_class = 'expand';
-    public $cat_class = 'faqwd_categories hidden';
+    public $cat_class = 'faqwd_categories faqwd_hidden';
     public $post_author = '';
     public $useful_count = '';
     public $non_useful_count = '';
@@ -17,7 +17,7 @@ class Display {
         if ($args['faq_expand_answers']) {
             $this->li_class = 'expanded';
         }
-        $cat_class = "faqwd_categories hidden";
+        $cat_class = "faqwd_categories faqwd_hidden";
         if ($args['category_show_title']) {
             $this->cat_class = "faqwd_categories";
         }
@@ -135,7 +135,7 @@ class Display {
             if($this->args['category_show_description'] && isset($this->cats)){
                 foreach($this->cats as $cat_id => $cat){
                     if(isset($cat->description) && $cat->description !== ""){
-                        $html .= ' <div class="faqwd_cat_desc_' . $cat_id . ' faqwd_cat_desc hidden">';
+                        $html .= ' <div class="faqwd_cat_desc_' . $cat_id . ' faqwd_cat_desc faqwd_hidden">';
                         $html .= $cat->description;
                         $html .= '</div>';
                     }
@@ -154,7 +154,7 @@ class Display {
         $html = '';
         $html .= '<div class="faqwd_expand_collapse">
     <span class="faqwd_expand">' . __('Expand All', 'faqwd') . '</span>
-        <span class="hidden">|</span>
+        <span class="faqwd_hidden">|</span>
     <span class="faqwd_collapse">' . __('Collapse All', 'faqwd') . '</span>
     </div>';
 
@@ -172,7 +172,7 @@ class Display {
 
         foreach($this->cats as $cat_id => $cat){
             if(isset($posts[$cat_id]) && count($posts[$cat_id]) > 0){
-                $html .= '<div class="faqwd_cat_' . $cat_id . ' faqwd_cat hidden">';
+                $html .= '<div class="faqwd_cat_' . $cat_id . ' faqwd_cat faqwd_hidden">';
                 $html .= '<ul class="faqwd_questions_ul">';
                 foreach($posts[$cat_id] as $number => $post){
                     $this->useful_count_arr = get_post_meta($post->ID, 'faqwd_useful');

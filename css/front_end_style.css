@@ -49,8 +49,7 @@
     line-height:15px;
 }
 /*questions*/
-.faqwd_question_title_container .faqwd_question_title {
-    line-height: 40px;
+.faqwd_question_title_container .faqwd_question_title {    
     float:left;
 }
 
@@ -186,7 +185,7 @@
 }
 
 
-.hidden {
+.faqwd_hidden {
     display: none;
 }
 
