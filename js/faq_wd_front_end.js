@@ -24,7 +24,7 @@
     }, 500);
 
 
-    jQuery(".faqwd_categories_li").live("click", function () {
+    jQuery(".faqwd_categories_li").on("click", function () {
         $(this).closest('.faqwd_conteiner').find('.faqwd_categories_li').removeClass("faqwd_cat_current");
         $(this).addClass("faqwd_cat_current");
         $(this).closest('.faqwd_conteiner').find('.faqwd_cat').hide();
@@ -40,7 +40,7 @@
     });
 
 
-    jQuery('.faqwd_question_li .faqwd_question_title_container').live("click", function () {
+    jQuery('.faqwd_question_li .faqwd_question_title_container').on("click", function () {
         var content_class = ".faqwd_question_" + $(this).data('faqid');
         if ($(this).closest('.faqwd_questions_ul').find(content_class).is(':visible')) {
             $(this).closest('.faqwd_questions_ul').find(content_class).slideUp("slow");
@@ -53,14 +53,14 @@
         expand_collapse('text', $(this));
     });
 
-    jQuery('.faqwd_expand').live("click", function () {
+    jQuery('.faqwd_expand').on("click", function () {
         $(this).closest('.faqwd_conteiner ').find('.faqwd_question_content').slideDown("slow");
         $(this).closest('.faqwd_conteiner ').find(".faqwd_question_title_container").each(function () {
             jQuery(this).addClass('opened');
         });
         expand_collapse('faqwd_expand', $(this));
     });
-    jQuery('.faqwd_collapse').live("click", function () {
+    jQuery('.faqwd_collapse').on("click", function () {
         $(this).closest('.faqwd_conteiner ').find('.faqwd_question_content').slideUp("slow");
         $(this).closest('.faqwd_conteiner ').find(".faqwd_question_title_container").each(function () {
             jQuery(this).removeClass('opened');

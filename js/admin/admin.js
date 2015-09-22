@@ -80,7 +80,7 @@
     });
     
     var taxonomy = 'faq_category';
-    $('#' + taxonomy + 'checklist li :checkbox, #' + taxonomy + 'checklist-pop :checkbox').live( 'click', function(){
+    $('#' + taxonomy + 'checklist li :checkbox, #' + taxonomy + 'checklist-pop :checkbox').on( 'click', function(){
         var t = $(this), c = t.is(':checked'), id = t.val();
         $('#in-' + taxonomy + '-' + id + ', #in-popular-' + taxonomy + '-' + id).prop( 'checked', c );
     });

@@ -3,7 +3,7 @@ Contributors: webdorado
 Donate link: https://web-dorado.com/products/wordpress-faq-wd.html 
 Tags: FAQ, FAQ Plugin, FAQs,wordpress faq, questions, answer, answers, helpdesk, help desk, help, frequently asked questions, faq page, FAQ widget
 Tested up to: 4.3
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
   
@@ -67,11 +67,14 @@ After downloading the ZIP file of the FAQ WD plugin,
 
 == Changelog ==
 
+= 1.0.4 =
+Minor bug fixed  
+
 = 1.0.3 =
 Changed: Styles
 
 = 1.0.1 =
-MInor bug fixed  
+Minor bug fixed  
 
 = 1.0.0 =
 Initial version    

@@ -1,18 +1,18 @@
 (function ($) {
-	jQuery('.faqwd_useful').live("click", function(){
+	jQuery('.faqwd_useful').on("click", function(){
 		var id = $(this).closest('.faqwd_vote_option').data('faqid');
 		if(id){
 			faq_wd_vote(id, 'useful');
 		}
 	});
 	
-	jQuery('.faqwd_non_useful').live("click", function(){
+	jQuery('.faqwd_non_useful').on("click", function(){
 		var id = $(this).closest('.faqwd_vote_option').data('faqid');
 		if(id){
 			faq_wd_vote(id, 'non_useful');
 		}
 	});
-	jQuery('.faqwd_question_title_container').live("click", function(){
+	jQuery('.faqwd_question_title_container').on("click", function(){
 		var faqid = $(this).data('faqid');
         var ques_class = '.faqwd_question_'+faqid;
         if( ! $(this).closest('.faqwd_question_li').find(ques_class).is(':visible') ) {
