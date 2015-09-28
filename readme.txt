@@ -67,11 +67,10 @@ After downloading the ZIP file of the FAQ WD plugin,
 
 == Changelog ==
 
-
-= 1.0.5 =
-Fixed: Bug in shortcode 
-Fixed: Conflict with some themes
-Fixed: Bug in Comments
+= 1.0.5 = 
+Fixed: Bug in shortcode      
+Fixed: Conflict with some themes     
+Fixed: Bug in Comments     
 
 = 1.0.4 =
 Minor bug fixed  
