@@ -72,7 +72,7 @@
     });
 
     $('.uninstall_button').click(function () {
-        if (confirm("You Are About To Uninstall Spider FAQ From WordPress.\nThis Action Is Not Reversible.\n\n Choose [Cancel] To Stop, [OK] To Uninstall.")) {
+        if (confirm("You Are About To Uninstall FAQ WD From WordPress.\nThis Action Is Not Reversible.\n\n Choose [Cancel] To Stop, [OK] To Uninstall.")) {
             $("#uninstall_form").submit();
         } else {
             

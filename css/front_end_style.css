@@ -11,6 +11,7 @@
 
 .faqwd_conteiner ul li{
     list-style-type: none !important;
+    list-style-image: none !important;
 
 }
 .faqwd_conteiner ul{
@@ -24,7 +25,8 @@
 
 /*categories*/
 .faqwd_categories_ul {
-    list-style-type: none;
+    list-style-type: none !important;
+    list-style-image: none !important;
 }
 
 .faqwd_categories_li {

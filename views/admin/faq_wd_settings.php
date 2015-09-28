@@ -15,8 +15,8 @@ global $faqwd_settings;
 
 <div class="wrap">
     <?php settings_errors(); ?>
-    <div id="ecwd-settings">
-        <div id="ecwd-settings-content">
+    <div id="faqwd-settings">
+        <div id="faqwd-settings-content">
             <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 
             <form method="post" action="options.php">
@@ -31,7 +31,7 @@ global $faqwd_settings;
 
             </form>
         </div>
-        <!-- #ecwd-settings-content -->
+        <!-- #faqwd-settings-content -->
     </div>
-    <!-- #ecwd-settings -->
+    <!-- #faqwd-settings -->
 </div><!-- .wrap -->

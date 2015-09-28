@@ -5,15 +5,15 @@ class faq_admin_class {
     protected static $instance = null;
     public $shortcode_tag = 'faq_wd';
     public $post_type = 'faq_wd';
-    public $version = '1.0.4';
+    public $version = '1.0.5';
 
     private function __construct() {
         if (is_admin()) {
             add_action('admin_menu', array($this, 'faq_wd_submenu'));
             foreach (array('post.php', 'post-new.php') as $hook) {
-                add_action('admin_head-' . $hook, array($this, 'faqwd_head'));
+                add_action('admin_head-' . $hook, array($this, 'get_shortcode_params'));
             }
-            add_action('admin_head', array($this, 'admin_head'));
+            add_action('admin_init', array($this, 'add_faqwd_shortcode'));
 //categories            
             add_action('create_faq_category', array($this, 'create_faq_category'));
             add_action('admin_head-edit-tags.php', array($this, 'faqwd_categories_js'));
@@ -61,7 +61,7 @@ class faq_admin_class {
         include_once('views/admin/faq_wd_settings.php');
     }
 
-    public function faqwd_head() {
+    public function get_shortcode_params() {
         $cat_ids = get_option('faqwd_categories_order');
         $cat_ids = json_decode($cat_ids);        
         ?>
@@ -70,23 +70,21 @@ class faq_admin_class {
             var categories = new Array();
        
         <?php
-        if ($cat_ids) {
-            $j = 0;
+        if ($cat_ids) {            
             foreach ($cat_ids as $i => $id) {
                 $term = get_term($id, 'faq_category');
                 ?>
-                    categories[<?php echo $j; ?>] = {
+                    categories.push({
                         id: '<?php echo $id; ?>',
                         name: '<?php echo $term->name; ?>'
-                    };
-                <?php
-                $j++;
+                    });
+                <?php                
             }            
         }
         ?> </script><?php
     }
 
-    public function admin_head() {
+    public function add_faqwd_shortcode() {
         if (!current_user_can('edit_posts') && !current_user_can('edit_pages')) {
             return;
         }
@@ -96,7 +94,7 @@ class faq_admin_class {
             ));
             add_filter('mce_buttons', array($this,
                 'mce_buttons'
-            ));
+            ));            
         }
     }
 
@@ -148,7 +146,7 @@ class faq_admin_class {
     }
 
     public function faqwd_add_meta_box() {
-        add_meta_box('faq_category_meta_box', 'FAQ Categories', array($this, 'faqwd_category_meta_box'), 'faq_wd', 'side', 'low');
+        add_meta_box('faq_category_meta_box', 'FAQ Categories', array($this, 'faqwd_category_meta_box'), 'faq_wd', 'advanced', 'default');
     }
 
     public function FAQWD_add_category_ordering(){
@@ -271,11 +269,11 @@ class faq_admin_class {
     public function include_admin_scripts() {
 
         wp_enqueue_style('faqwd_shortcode_style', FAQ_URL . 'css/mce-button.css');
-        wp_register_script('spider-faq-script', FAQ_URL . 'js/admin/admin.js', array('jquery',
+        wp_register_script('faq-wd-script', FAQ_URL . 'js/admin/admin.js', array('jquery',
             'jquery-ui-sortable',
             'jquery-ui-tabs'
                 ), $this->version, true);
-        wp_enqueue_script('spider-faq-script');
+        wp_enqueue_script('faq-wd-script');
 
         wp_enqueue_media();
     }
@@ -334,7 +332,7 @@ class faq_admin_class {
             delete_option('faqwd_settings_general');
             delete_option('faq_category_children');
             $deactivate_url = wp_nonce_url('plugins.php?action=deactivate&amp;plugin=' . FAQ_BASENAME, 'deactivate-plugin_' . FAQ_BASENAME);
-            echo '<br /><a href=' . $deactivate_url . ' > Click Here <a/>To Finish The Uninstallation And Spider FAQ Will Be Deactivated Automatically.';
+            echo '<br /><a href=' . $deactivate_url . ' > Click Here <a/>To Finish The Uninstallation And FAQ WD Will Be Deactivated Automatically.';
         } else {
             include_once('views/admin/uninstall.php');
         }

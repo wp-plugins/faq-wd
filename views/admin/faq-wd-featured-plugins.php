@@ -16,9 +16,9 @@ global $ecwd_tabs;
 
 <div class="wrap">
 	<?php settings_errors(); ?>
-	<div id="ecwd-settings">
+	<div id="faqwd-settings">
 
-		<div id="ecwd-settings-content">
+		<div id="faqwd-settings-content">
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 
 			<div id="main_featured_plugins_page">
@@ -97,10 +97,10 @@ global $ecwd_tabs;
 						<li class="faq">
 							<div class="product"></div>
 							<div class="title">
-								<strong class="heading">Spider FAQ</strong>
+								<strong class="heading">FAQ WD</strong>
 							</div>
 							<div class="description">
-								<p>The Spider FAQ WordPress plugin is for creating an FAQ (Frequently Asked Questions) section for your website.</p>
+								<p>The FAQ WD WordPress plugin is for creating an FAQ (Frequently Asked Questions) section for your website.</p>
 							</div>
 							<a target="_blank" href="https://web-dorado.com/products/wordpress-faq-plugin.html" class="download">Download</a>
 						</li>
@@ -178,7 +178,7 @@ global $ecwd_tabs;
 				</form>
 			</div>
 		</div>
-		<!-- #ecwd-settings-content -->
+		<!-- #faqwd-settings-content -->
 	</div>
-	<!-- #ecwd-settings -->
+	<!-- #faqwd-settings -->
 </div><!-- .wrap -->

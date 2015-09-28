@@ -54,7 +54,7 @@ class faq_cpt {
             'capability_type' => 'post',
             'taxonomies' => array('faq_category'),
             'has_archive' => true,
-            'hierarchical' => false,
+            'hierarchical' => true,
             'menu_icon' => FAQ_URL . 'images/icon-FAQ.png',
             'supports' => array_merge(array('title',
                 'editor',
@@ -74,7 +74,7 @@ class faq_cpt {
             'edit_item' => 'Edit Category',
             'update_item' => 'Update Category',
             'add_new_item' => 'Add New Category',
-            'new_item_name' => 'New Genre Category',
+            'new_item_name' => 'New Category',
             'menu_name' => 'FAQ Categories'
         );
         $args = array(

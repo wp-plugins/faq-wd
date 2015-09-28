@@ -14,7 +14,7 @@ global $post;
                 <span style="font-size: 15px; font-weight: bold;">The FAQ currently uses default theme. Upgrade to Pro version to modify theme options and get fancy 5 more themes.</span>
                 <br/>
                 <br/>
-                <div class="ecwd-meta-control">
+                <div class="faqwd-meta-control">
                     <img width="100%" height="100%"
                          src="<?php echo FAQ_URL ?>images/theme.jpg">
                 </div>

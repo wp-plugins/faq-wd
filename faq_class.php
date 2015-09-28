@@ -6,7 +6,7 @@ class faq_class{
     public $cpt;
     public $shortcode_tag = 'faq_wd';
     public $post_type = 'faq_wd';
-    public $version = '1.0.4';
+    public $version = '1.0.5';
 
     private function __construct(){
         $this->includes();
@@ -113,12 +113,11 @@ class faq_class{
             global $post;
 
             if (is_single()) {
-                if ($post->post_type == 'faq_wd') {
-                    $event_content = '';
+                if ($post->post_type == 'faq_wd') {                    
                     ob_start();
-                    include_once(FAQ_DIR . '/views/faq_wd_content.php');
-                    $event_content .= ob_get_clean();
-                    $content = $event_content;
+                    include(FAQ_DIR . '/views/faq_wd_content.php');
+                    $faq_content .= ob_get_clean();
+                    $content = $faq_content;
                 }
             }
             return $content;

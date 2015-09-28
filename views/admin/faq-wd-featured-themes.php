@@ -16,9 +16,9 @@ global $ecwd_tabs;
 
 <div class="wrap">
 	<?php settings_errors(); ?>
-	<div id="ecwd-settings">
+	<div id="faqwd-settings">
 
-		<div id="ecwd-settings-content">
+		<div id="faqwd-settings-content">
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
 
 			<div id="main_featured_themes_page">
@@ -129,7 +129,7 @@ global $ecwd_tabs;
 				</form>
 			</div >
 		</div>
-		<!-- #ecwd-settings-content -->
+		<!-- #faqwd-settings-content -->
 	</div>
-	<!-- #ecwd-settings -->
+	<!-- #faqwd-settings -->
 </div><!-- .wrap -->

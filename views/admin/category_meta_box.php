@@ -34,7 +34,7 @@
                 echo "</label></li>";
             }
             ?>
-        </ul><!--
-    </div>-->
+        </ul>
+    </div>
 
 </div>
