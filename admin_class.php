@@ -5,7 +5,7 @@ class faq_admin_class {
     protected static $instance = null;
     public $shortcode_tag = 'faq_wd';
     public $post_type = 'faq_wd';
-    public $version = '1.0.5';
+    public $version = '1.0.6';
 
     private function __construct() {
         if (is_admin()) {

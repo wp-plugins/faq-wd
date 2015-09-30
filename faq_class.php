@@ -6,7 +6,7 @@ class faq_class{
     public $cpt;
     public $shortcode_tag = 'faq_wd';
     public $post_type = 'faq_wd';
-    public $version = '1.0.5';
+    public $version = '1.0.6';
 
     private function __construct(){
         $this->includes();
@@ -116,7 +116,7 @@ class faq_class{
                 if ($post->post_type == 'faq_wd') {                    
                     ob_start();
                     include(FAQ_DIR . '/views/faq_wd_content.php');
-                    $faq_content .= ob_get_clean();
+                    $faq_content = ob_get_clean();
                     $content = $faq_content;
                 }
             }

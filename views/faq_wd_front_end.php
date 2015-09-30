@@ -228,7 +228,7 @@ class Display {
                         $html .= '<span class="faqwd_date">' . date("d.m.y", strtotime($post->post_date)) . '</span>';
                     }
                     $html .= '</div>';
-                    $content = wpautop($post->post_content);
+                    $content = wpautop(do_shortcode( $post->post_content ));
                     $tmp_arr = explode('<!--more-->', $content);
                     $content = $tmp_arr[0];
 
