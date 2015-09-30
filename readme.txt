@@ -1,7 +1,8 @@
 === FAQ ===
 Contributors: webdorado
 Donate link: https://web-dorado.com/products/wordpress-faq-wd.html 
-Tags: FAQ, FAQ Plugin, FAQs,wordpress faq, questions, answer, answers, helpdesk, help desk, help, frequently asked questions, faq page, FAQ widget
+Tags: FAQ, FAQ Plugin, FAQs,wordpress faq, questions, answer, answers, helpdesk, help desk, help, frequently asked questions, faq page, FAQ widget 
+Requires at least: 3.9
 Tested up to: 4.3
 Stable tag: 1.0.5
 License: GPLv2 or later
@@ -48,7 +49,7 @@ Upgrade to [WordPress FAQ WD Pro](https://web-dorado.com/products/wordpress-faq-
 #### Thank you for your interest in FAQ WD.  
 
 ### Minimum requirements.  
-*   Wordpress 3.5+  
+*   Wordpress 3.9+  
 *   PHP 5.x  
 *   MySQL 5.x  
 
