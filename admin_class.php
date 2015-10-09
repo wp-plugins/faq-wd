@@ -5,7 +5,7 @@ class faq_admin_class {
     protected static $instance = null;
     public $shortcode_tag = 'faq_wd';
     public $post_type = 'faq_wd';
-    public $version = '1.0.6';
+    public $version = '1.0.7';
 
     private function __construct() {
         if (is_admin()) {
@@ -73,10 +73,11 @@ class faq_admin_class {
         if ($cat_ids) {            
             foreach ($cat_ids as $i => $id) {
                 $term = get_term($id, 'faq_category');
+                $term_name = str_replace(array("'",'"'),array("\'", '\"'),$term->name);                
                 ?>
                     categories.push({
                         id: '<?php echo $id; ?>',
-                        name: '<?php echo $term->name; ?>'
+                        name: '<?php echo $term_name; ?>'
                     });
                 <?php                
             }            
@@ -238,7 +239,7 @@ class faq_admin_class {
     }
 
     public function FAQWD_get_posts($wp_query) {
-        if ($wp_query->query['post_type'] == "faq_wd") {
+        if (isset($wp_query->query['post_type']) && $wp_query->query['post_type'] == "faq_wd") {
             if (!$wp_query->get('orderby')) {
                 $wp_query->set('orderby', 'meta_value');
                 $wp_query->set('meta_key', 'faqwd_order');

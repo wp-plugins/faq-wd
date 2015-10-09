@@ -74,12 +74,12 @@
 }
 
 .faqwd_question_title_container .before20 .arr {
-    background: url(http://wp422.dev/wp-content/plugins/faq-wd/images/arr_down.png) no-repeat center center;
+    background: url(../images/arr_down.png) no-repeat center center;
     margin-top: 0px;
 }
 
 .opened .before20 .arr {
-    background: url(http://wp422.dev/wp-content/plugins/faq-wd/images/arr_up.png) no-repeat center center;
+    background: url(../images/arr_up.png) no-repeat center center;
     margin-top: 0px;
 }
 

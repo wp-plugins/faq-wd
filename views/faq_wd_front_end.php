@@ -169,6 +169,10 @@ class Display {
         $exists_ips = get_option('faqwd_voted_ips');
         $exists_ips = json_decode($exists_ips, true);
 
+        $display_more_button = false;
+        if (!(isset($faqwd_options['display_more_button'])) || (isset($faqwd_options['display_more_button']) && $faqwd_options['display_more_button'] == '1')) {
+            $display_more_button = true;
+        }
         foreach ($this->cats as $cat_id => $cat) {
             if (isset($posts[$cat_id]) && count($posts[$cat_id]) > 0) {
                 $html .= '<div class="faqwd_cat_' . $cat_id . ' faqwd_cat faqwd_hidden">';
@@ -228,7 +232,7 @@ class Display {
                         $html .= '<span class="faqwd_date">' . date("d.m.y", strtotime($post->post_date)) . '</span>';
                     }
                     $html .= '</div>';
-                    $content = wpautop(do_shortcode( $post->post_content ));
+                    $content = wpautop(do_shortcode($post->post_content));
                     $tmp_arr = explode('<!--more-->', $content);
                     $content = $tmp_arr[0];
 
@@ -237,7 +241,9 @@ class Display {
                     } else {
                         $html .= '<div class="faqwd_answer">' . $content . '</div>';
                     }
-                    $html .= '<span><a class="faqwd_read_more_button" href="' . get_permalink($post->ID) . '">' . __("More", "faqwd") . '</a></span>';
+                    if ($display_more_button == true) {
+                        $html .= '<span><a class="faqwd_read_more_button" href="' . get_permalink($post->ID) . '">' . __("More", "faqwd") . '</a></span>';
+                    }
                     $html .= '<div class="faqwd_question_options">';
                     if ($this->args['faq_like']) {
                         $html .= '<div class="faqwd_vote_option" data-faqid= ' . $post->ID . '>';
@@ -256,7 +262,7 @@ class Display {
                     if ($this->args['faq_hits']) {
                         $html .= '<span class="faqwd_viewed" >' . __("Viewed", "faqwd") . '
                                         <span class="faqwd_count_hits_' . $post->ID . '">' . $this->hits_count . '</span>' . __(" Times ", "faqwd") . '</span>';
-                    }                    
+                    }
                     if (isset($faqwd_options['single_display_comments']) && $faqwd_options['single_display_comments'] == 1 && $post->comment_status == 'open') {
                         $html .= '<span class="faqwd_post_comments"><a href="' . get_comments_link($post->ID) . '">' . $comment . '</a></span>';
                     }

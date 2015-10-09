@@ -25,7 +25,7 @@
 
 /*categories*/
 .faqwd_categories_ul {
-    list-style-type: none !important;
+    list-style-type: none;
     list-style-image: none !important;
 }
 
@@ -128,10 +128,10 @@
     float: right;
     padding-right: 5px;
 }
+
 .type-faq_wd .views span{
     display:inline-block;
 }
-
 .faqwd_post_author, .faqwd_vote_option, .faqwd_viewed {
     padding-left: 5px;
 }
@@ -277,6 +277,25 @@ a.faqwd_fb {
 .faqwd_cat_desc{
     font-family: OpenSansRegular;
     font-size: 14px !important;
+}
+
+@media screen and (max-width: 480px) {
+    .faqwd_conteiner {        
+        width:97% !important;
+    }
+    .faqwd_question_title {
+        width: 90% !important;
+        line-height: 33px !important;
+    }
+}
+@media screen and (max-width: 650px) {
+    .faqwd_conteiner {        
+        width:99% !important;
+    }
+    .faqwd_question_title {
+        width: 90% !important;
+        line-height: 33px !important;
+    }
 }
 
 @font-face {
