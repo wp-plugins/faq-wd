@@ -34,7 +34,7 @@
         var arr = search.split('post_type=');
         arr = arr[1];
         if (typeof arr != 'undefined' && arr.split('&')[0] == "faq_wd") {
-            $('table.posts #the-list').sortable({
+            $('#the-list').sortable({
                 'items': 'tr',
                 'axis': 'y',
                 'update': function (e, ui) {
@@ -43,7 +43,7 @@
                         var id = $(this).attr('id');
                         id = id.split('-');
                         order.push(id[1]);
-                    });
+                    });                    
                     $.post(ajaxurl, {
                         action: 'faqwd_sotable',
                         order: order.join(',')

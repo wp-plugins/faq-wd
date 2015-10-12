@@ -5,7 +5,7 @@ class faq_admin_class {
     protected static $instance = null;
     public $shortcode_tag = 'faq_wd';
     public $post_type = 'faq_wd';
-    public $version = '1.0.7';
+    public $version = '1.0.8';
 
     private function __construct() {
         if (is_admin()) {
@@ -228,24 +228,24 @@ class faq_admin_class {
     }
 
     public function faqwd_sotable() {
-        if (isset($_POST['order']) && $_POST['order'] != '') {
-            $ids = explode(',', $_POST['order']);
+        if (isset($_POST['order']) && $_POST['order'] != '') {            
+            $ids = explode(',', $_POST['order']);            
             $max = count($ids) - 1;
             foreach ($ids as $i => $id) {
-                update_post_meta($id, 'faqwd_order', $max - $i);
+                update_post_meta($id, 'faqwd_order', $max - $i);                
             }
             die;
         }
     }
 
     public function FAQWD_get_posts($wp_query) {
-        if (isset($wp_query->query['post_type']) && $wp_query->query['post_type'] == "faq_wd") {
-            if (!$wp_query->get('orderby')) {
+        if (isset($wp_query->query['post_type']) && $wp_query->query['post_type'] == "faq_wd") {            
+//            if (!$wp_query->get('orderby')) {
                 $wp_query->set('orderby', 'meta_value');
                 $wp_query->set('meta_key', 'faqwd_order');
-            }
-            if (!$wp_query->get('order'))
-                $wp_query->set('order', 'DESC');
+//            }
+//            if (!$wp_query->get('order'))
+                $wp_query->set('order', 'DESC');                                                
         }
     }
 
