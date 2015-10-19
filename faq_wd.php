@@ -3,7 +3,7 @@
  * Plugin Name: FAQ WD
  * Plugin URI: https://web-dorado.com/products/wordpress-faq-wd.html 
  * Description: Do you need an elegant FAQ section to describe details of your services, terms and conditions? You have a long company history and want to have it in Q&A format? Then FAQ WD will be the most convenient tool for reaching a highly professional result. 
- * Version: 1.0.8
+ * Version: 1.0.9
  * Author: WebDorado
  * Author URI: https://web-dorado.com/
  * License: GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html

@@ -216,7 +216,7 @@ class Display {
                     $html .= '<li class="faqwd_question_li ' . $this->li_class . ' faqwd_qustion_li_' . $cat_id . '_' . $post->ID . '">';
                     $html .= '<div class="faqwd_question_title_container" data-faqid=' . $cat_id . "_" . $post->ID . '>';
                     $html .= ' <div class="faqwd_question_title">';
-                    $html .= ' <span class="faqwd_quest_numbering">' . ($number + 1) . '.</span>';
+                    $html .= ' <span class="faqwd_quest_numbering">' . ($number + 1) . '. </span>';
                     $html .= '<span class="faqwd_post_title" id="' . $cat_id . '_' . $post->ID . '">' . $post->post_title . '</span>';
                     $html .= '</div>';
                     $html .= '<div class="before20"><span class="arr">&nbsp;</span></div>';
